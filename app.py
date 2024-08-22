@@ -4,7 +4,7 @@ import pickle
 import numpy as np
 
 app=Flask(__name__)
-CORS(app,resources={r"/predict": {"origins": "http://localhost:3000"}})
+CORS(app,origins=["https://autovalue-estimator.netlify.app"])
 with open('model/car_price_predictor.pkl', 'rb') as model_file:
     model = pickle.load(model_file)
     
